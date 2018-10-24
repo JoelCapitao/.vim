@@ -7,19 +7,19 @@ call pathogen#helptags()
 set nocompatible
 
 " Disable the key movements
-nnoremap <Up> <Nop>
-vnoremap <Up> <Nop>
-inoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-vnoremap <Down> <Nop>
-inoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-vnoremap <Left> <Nop>
-inoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-vnoremap <Right> <Nop>
-inoremap <Right> <Nop>
-
+"nnoremap <Up> <Nop>
+"vnoremap <Up> <Nop>
+"inoremap <Up> <Nop>
+"nnoremap <Down> <Nop>
+"vnoremap <Down> <Nop>
+"inoremap <Down> <Nop>
+"nnoremap <Left> <Nop>
+"vnoremap <Left> <Nop>
+"inoremap <Left> <Nop>
+"nnoremap <Right> <Nop>
+"vnoremap <Right> <Nop>
+"inoremap <Right> <Nop>
+"
 " Enable syntax highlighting
 set t_Co=256
 colorscheme delek
@@ -34,6 +34,9 @@ set directory^=$home/.vim_swap//
 
 " Highlight the screen line of the cursor
 set cursorline
+
+" Do not highlight the column of the cursor
+set nocursorcolumn
 
 " Allows you to switch from an unsaved buffer without saving it first. 
 " Also allows you to keep an undo history for multiple files. Vim will 
@@ -85,6 +88,15 @@ set splitright
 
 " Split horizontal windows below to the current windows
 set splitbelow
+
+" Set default encoding to UTF-8
+set encoding=utf-8
+
+" Show the match while typing
+set incsearch
+
+" Highlight found searches
+set hlsearch
 
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
