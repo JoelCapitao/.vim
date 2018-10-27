@@ -63,6 +63,9 @@ set cmdheight=2
 " Display line numbers on the left
 set number
 
+" Show the line number relative to the line with the cursor in front of line
+set relativenumber
+
 " No beeps
 set noerrorbells
 
@@ -105,23 +108,12 @@ au BufNewFile,BufRead *.jade setlocal expandtab ts=2 sw=2
 
 augroup filetypedetect
   au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
-  au BufNewFile,BufRead .nginx.conf*,nginx.conf* setf nginx
 augroup END
 
 au FileType nginx setlocal noet ts=4 sw=4 sts=4
 
-" Go settings
-au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
-" autocmd BufEnter *.go colorscheme nofrils-dark
-
-" scala settings
-autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab
-
 " Markdown Settings
 autocmd BufNewFile,BufReadPost *.md setl ts=4 sw=4 sts=4 expandtab
-
-" lua settings
-autocmd BufNewFile,BufRead *.lua setlocal noet ts=4 sw=4 sts=4
 
 " Dockerfile settings
 autocmd FileType dockerfile set noexpandtab
@@ -139,12 +131,6 @@ au BufRead,BufNewFile MAINTAINERS set ft=toml
 " hcl settings
 au BufRead,BufNewFile *.workflow set ft=hcl
 
-" mips settings
-au BufRead,BufNewFile *.mips set ft=mips
-
-" spell check for git commits
-autocmd FileType gitcommit setlocal spell
-
 " Wildmenu completion {{{
 set wildmenu
 " set wildmode=list:longest
@@ -154,14 +140,9 @@ set wildignore+=.hg,.git,.svn                    " Version control
 set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
-set wildignore+=*.spl                            " compiled spelling word lists
 set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.DS_Store                       " OSX bullshit
-set wildignore+=*.luac                           " Lua byte code
 set wildignore+=migrations                       " Django migrations
-set wildignore+=go/pkg                           " Go static files
-set wildignore+=go/bin                           " Go bin files
-set wildignore+=go/bin-vagrant                   " Go bin-vagrant files
 set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
 
