@@ -6,31 +6,14 @@ call pathogen#helptags()
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-" Disable the key movements
-nnoremap <Up> <Nop>
-vnoremap <Up> <Nop>
-inoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-vnoremap <Down> <Nop>
-inoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-vnoremap <Left> <Nop>
-inoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-vnoremap <Right> <Nop>
-inoremap <Right> <Nop>
-
 " Enable syntax highlighting
 set t_Co=256
 colorscheme delek
 filetype plugin indent on
 syntax on
 
-" Press jk to escape
-imap jk <Esc>
-
 " Put all swap files together in one place
-set directory^=$home/.vim_swap//   
+set directory^=$home/.vim_swap//
 
 " Highlight the screen line of the cursor
 set cursorline
@@ -106,12 +89,6 @@ syntax sync minlines=256
 
 " open help vertically
 command! -nargs=* -complete=help Help vertical belowright help <args>
-
-" Shortcutting split navigation, saving a keypress:
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 
 "--------------------------------------------------
 " File Type settings
@@ -198,11 +175,54 @@ set expandtab
 " Mappings
 "
 
-let mapleader = ";"
+let mapleader = ","
 
 
+nnoremap <leader>w :w <CR>
+nnoremap <leader>x :x <CR>
+nnoremap <leader>nh :set invhlsearch <CR>
+nnoremap <leader>nu :set invnumber <CR>
+nnoremap <leader>nt :NERDTreeToggle <CR>
 
+" Press jk to escape
+imap jk <Esc>
+
+" Disable the key movements
+nnoremap <Up> <Nop>
+vnoremap <Up> <Nop>
+inoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+vnoremap <Down> <Nop>
+inoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+vnoremap <Left> <Nop>
+inoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+vnoremap <Right> <Nop>
+inoremap <Right> <Nop>
+
+" Shortcutting split navigation, saving a keypress:
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " System clipboard copy & paste support
 " F2 before pasting to preserve indentation
 set pastetoggle=<F2> 
+
+
+" -----------------------------------------
+"    Plugin configs             "
+" -- --------------------------------------
+
+
+"==================== NerdTree ====================
+" For toggling
+nmap <C-n> :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeToggle<cr>
+noremap <Leader>f :NERDTreeFind<cr>
+
+let NERDTreeShowHidden=1
+
+let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store']
