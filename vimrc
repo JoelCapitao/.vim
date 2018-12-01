@@ -12,8 +12,8 @@ colorscheme delek
 filetype plugin indent on
 syntax on
 
-" Put all swap files together in one place
-set directory^=$home/.vim_swap//
+" Don't use swapfile
+set noswapfile
 
 " Highlight the screen line of the cursor
 set cursorline
