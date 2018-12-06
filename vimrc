@@ -93,7 +93,7 @@ syntax sync minlines=256
 " open help vertically
 command! -nargs=* -complete=help Help vertical belowright help <args>
 
-" Do not hide conceal text
+" Do not hide markdown
 set conceallevel=0
 
 "--------------------------------------------------
@@ -219,3 +219,6 @@ let g:delimitMate_jump_expansion = 1
 let g:delimitMate_smart_matchpairs = '^\%(\w\|\$\)'
 let g:delimitMate_smart_quotes = 1
 
+" ==================== vim-json ====================
+
+let g:vim_json_syntax_conceal = 0
