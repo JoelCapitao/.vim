@@ -93,6 +93,9 @@ syntax sync minlines=256
 " open help vertically
 command! -nargs=* -complete=help Help vertical belowright help <args>
 
+" Do not hide conceal text
+set conceallevel=0
+
 "--------------------------------------------------
 " File Type settings
 "
@@ -190,7 +193,7 @@ map <C-l> <C-w>l
 
 " System clipboard copy & paste support
 " F2 before pasting to preserve indentation
-set pastetoggle=<F2> 
+set pastetoggle=<F2>
 
 
 " -----------------------------------------
