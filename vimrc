@@ -220,5 +220,11 @@ let g:delimitMate_smart_matchpairs = '^\%(\w\|\$\)'
 let g:delimitMate_smart_quotes = 1
 
 " ==================== vim-json ====================
-
 let g:vim_json_syntax_conceal = 0
+
+" ==================== emmet-vim ====================
+" Enable just for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+" Redefine trigger key
+let g:user_emmet_leader_key='<C-Z>'
