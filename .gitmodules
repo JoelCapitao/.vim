@@ -81,4 +81,4 @@
 	url = https://github.com/stephpy/vim-yaml.git
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
-	url = https://github.com/stephpy/emmet-vim.git
+	url = https://github.com/mattn/emmet-vim.git
