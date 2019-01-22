@@ -195,6 +195,15 @@ map <C-l> <C-w>l
 " F2 before pasting to preserve indentation
 set pastetoggle=<F2>
 
+" Copy/paste using PRIMARY (copy-on-select) register
+" can be pasted with the middle mouse
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+
+" Copy/paste using CLIPBOARD register
+" copy with ^C and paste with ^V
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
 " -----------------------------------------
 "    Plugin configs             "
