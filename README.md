@@ -14,6 +14,11 @@ $ ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 $ cd $HOME/.vim
 $ git submodule update --init
 ```
+## Clipboard
+
+The +clipboard feature is missing in vim package because it's built without Xorg support.
+To be able to operate with premary and clipboard selection buffers, we need to install gvim package which provides CLI version of Vim with the +clipboard feature.
+More informations following : https://wiki.archlinux.org/index.php/Vim#Installation
 
 ## Pathogen
 The vim dot files make use of the excellent [Pathogen](https://github.com/tpope/vim-pathogen) runtime path manager to install plugins and runtime files into their own private directiories.
