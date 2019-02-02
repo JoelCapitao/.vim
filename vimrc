@@ -164,6 +164,7 @@ let mapleader = ","
 
 nnoremap <leader>w :w <CR>
 nnoremap <leader>x :x <CR>
+nnoremap <leader>q :q <CR>
 nnoremap <leader>nh :set invhlsearch <CR>
 nnoremap <leader>nu :set invnumber <CR>
 nnoremap <leader>nt :NERDTreeToggle <CR>
