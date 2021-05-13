@@ -108,6 +108,7 @@ au BufNewFile,BufRead *.cpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.hpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.jade setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead Vagrantfile set ft=ruby
 
 augroup filetypedetect
   au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
@@ -238,3 +239,10 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 " Redefine trigger key
 let g:user_emmet_leader_key='<C-Y>'
+
+
+" ==================== vimwiki ====================
+" Set ~/Documents/notes as vimwiki path
+" Use markdown as syntax
+let g:vimwiki_list = [{'path': '~/Documents/notes',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
